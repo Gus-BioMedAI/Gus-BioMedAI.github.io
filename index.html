@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gustavo Guacaneme | Clinical AI and biomedical engineering</title>
 
-<meta name="description" content="Biomedical engineer in Madrid. Clinical NLP, multimodal survival modelling for lung cancer, and clinical AI that holds up in a hospital.">
+<meta name="description" content="Biomedical engineer in Madrid. Clinical AI on real patient data with two Madrid hospitals. Open to junior roles in clinical data, regulatory &amp; quality, clinical applications and medtech product.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gustavo Guacaneme | Clinical AI and biomedical engineering">
-<meta property="og:description" content="Biomedical engineer in Madrid. Clinical NLP, multimodal survival modelling for lung cancer, and clinical AI that holds up in a hospital.">
+<meta property="og:description" content="Biomedical engineer in Madrid. Clinical AI on real patient data with two Madrid hospitals. Open to junior roles in clinical data, regulatory &amp; quality, clinical applications and medtech product.">
 <meta property="og:url" content="https://gus-biomedai.github.io/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://gus-biomedai.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gustavo Guacaneme Fernández, biomedical engineer, Madrid">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%239C3D2E'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23FAF6EF' font-family='Georgia'%3EG%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,8 +29,6 @@
     document.documentElement.dataset.theme = t;
   } catch (e) {}
 </script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <style>
 /* ─────────────────────────────────────────────
@@ -50,7 +53,7 @@
   --fs-lead:  1.375rem;
   --fs-h3:    1.625rem;
   --fs-h2:    clamp(1.9rem, 4.2vw, 2.85rem);
-  --fs-disp:  clamp(2.6rem, 8.5vw, 6rem);
+  --fs-disp:  clamp(2.25rem, 5.5vw, 4rem);
 
   --s1: 0.5rem;  --s2: 1rem;   --s3: 1.5rem;
   --s4: 2.5rem;  --s5: 4rem;   --s6: 6rem;   --s7: 9rem;
@@ -90,20 +93,18 @@ body {
 }
 
 /* ── Type roles ───────────────────────────────
-   Fraunces is display only. SOFT rounds the
-   terminals, WONK swaps in the italianate g/y —
-   that pair is what makes it read vintage
-   instead of Playfair-generic.                  */
+   Fraunces is display only, with SOFT and WONK
+   off: sharper, more institutional terminals.   */
 .display, h1, h2 {
   font-family: Fraunces, Georgia, serif;
-  font-variation-settings: 'SOFT' 45, 'WONK' 1, 'opsz' 120;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 120;
   font-weight: 500;
   line-height: 1.04;
   letter-spacing: -0.018em;
 }
 h3 {
   font-family: Fraunces, Georgia, serif;
-  font-variation-settings: 'SOFT' 30, 'WONK' 1, 'opsz' 40;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 40;
   font-weight: 500;
   font-size: var(--fs-h3);
   line-height: 1.2;
@@ -143,7 +144,7 @@ a:hover { color: var(--sanguine); }
 }
 .mark {
   font-family: Fraunces, Georgia, serif;
-  font-variation-settings: 'SOFT' 45, 'WONK' 1, 'opsz' 20;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 20;
   font-size: 1.0625rem; font-weight: 500;
   color: var(--ink); text-decoration: none;
 }
@@ -163,12 +164,35 @@ a:hover { color: var(--sanguine); }
 /* ─────────────────────────────────────────────
    HERO — the one loud moment on the page
    ───────────────────────────────────────────── */
-.hero { padding-block: var(--s5) var(--s6); }
+.hero { padding-block: var(--s4) var(--s5); }
 
+.eyebrow {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  margin-bottom: var(--s2);
+}
 .hero h1 {
   font-size: var(--fs-disp);
-  max-width: 16ch;
+  max-width: 20ch;
+  text-wrap: balance;
 }
+@media (max-width: 30rem) {
+  .topnav { gap: var(--s2); }
+  .topnav a[href="#contact"] { display: none; } /* email + CV are in the hero */
+  .hero .hero-sub { font-size: 1.125rem; }
+}
+.cta { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s3); }
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--sanguine); border-radius: 3px;
+  background: var(--sanguine); color: var(--paper);
+  font-size: var(--fs-small); font-weight: 500;
+  text-decoration: none;
+}
+.btn:hover { color: var(--paper); filter: brightness(1.1); }
+.btn-ghost { background: none; color: var(--sanguine); }
+.btn-ghost:hover { color: var(--sanguine); background: var(--paper-sunk); filter: none; }
 .hero-rule {
   height: 2px; background: var(--sanguine);
   margin-block: var(--s4) var(--s3);
@@ -186,10 +210,12 @@ a:hover { color: var(--sanguine); }
    stylesheet fails, everything is already visible. */
 @keyframes rise { from { opacity: 0; transform: translateY(0.7rem); } }
 @keyframes draw { from { transform: scaleX(0); } }
+.hero .eyebrow,
 .hero h1       { animation: rise .7s ease-out backwards; }
 .hero-rule     { animation: draw .8s cubic-bezier(.2,.7,.3,1) .35s backwards; }
 .hero-sub      { animation: rise .7s ease-out .5s backwards; }
-.hero .stub    { animation: rise .7s ease-out .65s backwards; }
+.hero .cta     { animation: rise .7s ease-out .6s backwards; }
+.hero .stub    { animation: rise .7s ease-out .7s backwards; }
 
 /* ─────────────────────────────────────────────
    THE STUB — term / value, the clinical record
@@ -214,7 +240,7 @@ a:hover { color: var(--sanguine); }
   display: grid;
   grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
   gap: 0 var(--s4);
-  padding-block: var(--s6);
+  padding-block: var(--s5);
   border-top: 1px solid var(--rule);
 }
 .section > .runhead {
@@ -238,7 +264,7 @@ a:hover { color: var(--sanguine); }
 }
 
 @media (max-width: 46rem) {
-  .section { grid-template-columns: 1fr; gap: var(--s2); padding-block: var(--s5); }
+  .section { grid-template-columns: 1fr; gap: var(--s2); padding-block: var(--s4); }
   .section > .runhead { position: static; }
 }
 
@@ -266,8 +292,8 @@ figcaption {
 .work h3 a { color: inherit; text-decoration-color: var(--rule); }
 .work h3 a:hover { color: var(--sanguine); text-decoration-color: currentColor; }
 .role {
-  font-size: var(--fs-micro);
-  color: var(--ink-faint);
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
 }
 .metrics {
   display: flex; flex-wrap: wrap; gap: var(--s1) var(--s4);
@@ -278,6 +304,47 @@ figcaption {
 .metrics span { color: var(--ink-soft); }
 .metrics b { font-weight: 500; color: var(--ink); }
 
+/* Illustrative NER sentence: labelled spans, no patient data */
+.ner-demo p {
+  max-width: none;
+  font-size: var(--fs-small);
+  line-height: 2.4;
+  background: var(--paper-sunk);
+  padding: var(--s2);
+}
+.ner-demo mark {
+  background: none; color: var(--ink);
+  border-bottom: 2px solid var(--verdigris);
+}
+.ner-demo mark::after {
+  content: attr(data-l);
+  font: 500 0.625rem 'IBM Plex Mono', monospace;
+  color: var(--sanguine);
+  margin-left: 0.3em;
+  vertical-align: super;
+}
+
+/* Pipeline strip */
+.flow ol { display: flex; flex-wrap: wrap; gap: var(--s1); list-style: none; padding: 0; margin: 0; }
+.flow li {
+  flex: 1 1 9rem;
+  background: var(--paper-sunk);
+  border-top: 2px solid var(--verdigris);
+  padding: 0.75rem;
+  font-size: var(--fs-small);
+  line-height: 1.45;
+}
+
+/* ─────────────────────────────────────────────
+   EXPERIENCE — same term/value record as the hero
+   ───────────────────────────────────────────── */
+.exp { max-width: none; margin-top: var(--s3); }
+.exp div { grid-template-columns: minmax(9rem, 14rem) minmax(0, 1fr); }
+.exp b { font-weight: 500; }
+@media (max-width: 46rem) {
+  .exp div { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
 /* ─────────────────────────────────────────────
    SKILLS — a key, not a list of adjectives
    ───────────────────────────────────────────── */
@@ -285,42 +352,29 @@ figcaption {
 .key h3 { font-size: 1.25rem; }
 .key ul { margin-top: var(--s2); display: grid; gap: 0.55rem; }
 .key li {
-  display: grid; grid-template-columns: 1.4rem minmax(0,1fr); gap: var(--s1);
+  position: relative;
+  padding-left: 1rem;
   font-size: var(--fs-small); color: var(--ink-soft);
 }
-.key li i {
-  font-style: normal;
-  font-family: 'IBM Plex Mono', monospace;
+.key li::before {
+  content: "–";
+  position: absolute; left: 0;
   color: var(--verdigris);
 }
 
 /* ─────────────────────────────────────────────
    CONTACT
    ───────────────────────────────────────────── */
-.contact { padding-block: var(--s6) var(--s5); border-top: 1px solid var(--rule); }
+.contact { padding-block: var(--s5); border-top: 1px solid var(--rule); }
 .contact h2 { font-size: var(--fs-h2); max-width: 14ch; }
+.contact-email {
+  margin-top: var(--s3);
+  font-size: var(--fs-lead);
+  overflow-wrap: anywhere;
+}
 .contact-links {
-  margin-top: var(--s4);
-  display: flex; flex-wrap: wrap; gap: var(--s2);
-}
-.contact-links a {
-  display: inline-grid; place-items: center;
-  width: 3.25rem; height: 3.25rem;
-  border: 1px solid var(--rule);
-  color: var(--ink-soft);
-  font-size: 1.35rem;
-  text-decoration: none;
-  transition: color .2s, border-color .2s, transform .2s;
-}
-.contact-links a:hover,
-.contact-links a:focus-visible {
-  color: var(--sanguine);
-  border-color: currentColor;
-  transform: translateY(-2px);
-}
-@media (prefers-reduced-motion: reduce) {
-  .contact-links a { transition: none; }
-  .contact-links a:hover, .contact-links a:focus-visible { transform: none; }
+  margin-top: var(--s3);
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3);
 }
 
 footer {
@@ -341,8 +395,9 @@ footer {
     <a class="mark" href="/">Gustavo</a>
     <nav class="topnav" aria-label="Sections">
       <a href="#work">Work</a>
-      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
+      <a href="cv.pdf" download="Gustavo-Guacaneme-CV.pdf">CV</a>
       <button class="theme-btn" id="theme" type="button" aria-pressed="false">Dark</button>
     </nav>
   </header>
@@ -351,17 +406,22 @@ footer {
 
     <!-- ══ HERO ══════════════════════════════ -->
     <section class="hero">
-      <h1>Multimodal AI for lung-cancer modelling.</h1>
+      <p class="eyebrow">Gustavo Guacaneme Fernández · Biomedical engineer · Madrid</p>
+      <h1>From messy hospital records to tools clinicians can read and check.</h1>
       <div class="hero-rule" role="presentation"></div>
       <p class="hero-sub">
-        I build clinical AI on real hospital data, designed so that clinicians can read and check what it outputs.
+        Clinical AI projects on real patient data with two Madrid hospitals, Clínico San Carlos and Ramón y Cajal.
+        Open to junior roles in clinical data &amp; AI, regulatory &amp; quality (EU MDR), clinical applications and medtech product.
+      </p>
+      <p class="cta">
+        <a class="btn" href="cv.pdf" download="Gustavo-Guacaneme-CV.pdf">Download CV (PDF)</a>
+        <a class="btn btn-ghost" href="mailto:gustavoguacanemefernandez@gmail.com">Email me</a>
       </p>
 
       <dl class="stub">
-        <div><dt>Focus</dt><dd>Clinical AI, oncology, multimodal data</dd></div>
-        <div><dt>Based in</dt><dd>Madrid, available full-time</dd></div>
-        <div><dt>Education</dt><dd>MSc Biomedical Engineering, UPM (2026); BSc, Politecnico di Milano</dd></div>
-        <div><dt>Languages</dt><dd>Spanish, Italian, English; French (A2)</dd></div>
+        <div><dt>Based in</dt><dd>Madrid, available full-time now</dd></div>
+        <div><dt>Education</dt><dd>MSc Biomedical Engineering (Management &amp; Innovation in Health Technologies), UPM, 2026 · BSc Biomedical Engineering, Politecnico di Milano, 2024</dd></div>
+        <div><dt>Languages</dt><dd>Spanish (native), Italian (bilingual), English (C1), French (B1)</dd></div>
       </dl>
     </section>
 
@@ -374,74 +434,103 @@ footer {
         <div class="work">
 
           <article>
-            <h3>Multimodal survival modelling for lung cancer</h3>
-            <p class="role">Master's thesis, UPM. Placement at Hospital Clínico San Carlos, supervised by Laura Llorente-Sanz. Defended July 2026.</p>
+            <h3>Structuring Spanish oncology notes at Hospital Clínico San Carlos</h3>
+            <p class="role">AI Research Intern, Hospital Clínico San Carlos · February to July 2026</p>
             <p>
-              Does adding CT radiomics to clinical variables improve survival prediction in
-              non-small-cell lung cancer, and would oncologists use the result? I built a late-fusion survival model on the public NSCLC-Radiomics cohort and linked it to the NLP pipeline below through a shared variable schema, so hospital notes and the public cohort use the same variables.
+              Lung-cancer notes are free text, so stage, ECOG or PD-L1 can't be counted without reading
+              every note. I built a pipeline that extracts ten variables from them: histology, stage,
+              T, N and M, ECOG, biomarkers, PD-L1, treatment and dates.
             </p>
             <p>
-              Fusion beat imaging-only (0.577) and clinical-only (0.539) on concordance. The gain is modest, and I report it together with calibration. In a
-              Technology Acceptance Model survey of 8 respondents (5 oncologists, 3 biomedical
-              engineers), clinicians rated usefulness and adoption intent between 4.4 and 4.8 out of 5.
-            </p>
-            <p class="metrics num">
-              <span>C-index <b>0.587</b></span>
-              <span>Patients <b>421</b></span>
-              <span>Integrated Brier score <b>0.21</b></span>
-            </p>
-          </article>
-
-          <article>
-            <h3>Spanish clinical NER for oncology notes</h3>
-            <p class="role">AI Research Intern, Hospital Clínico San Carlos, February to July 2026</p>
-            <p>
-              Extracts ten oncology variables from free-text Spanish lung-cancer notes: histology, TNM, stage, ECOG, biomarkers, PD-L1, treatment and dates. The model is a frozen bsc-bio-ehr-es encoder with a trainable linear head (PyTorch, Hugging Face Transformers).
-            </p>
-            <p>
-              There was no labelled data, so I built the gold standard from scratch: regex and
-              gazetteer pre-annotation, reviewed by hand in Doccano, with a blind
-              intra-annotator reliability check. Evaluated with patient-level 5-fold
-              cross-validation, so no patient appears in both training and test. Everything ran
+              There was no labelled data, so the first step was the annotation guideline, which I defined
+              with an oncologist at the hospital, with a boundary rule for each label. I then built the gold
+              standard: regex and gazetteer pre-annotation, then manual annotation and review. That gave 1,432
+              spans across 108 notes from 43 patients, checked with a blind reliability pass. Everything ran
               on-premise and offline under GDPR and LOPDGDD.
             </p>
+            <p>
+              Validated per patient, so no patient appears in both training and test: micro-F1 0.71 when a
+              prediction must overlap the right span, 0.47 when boundaries must match exactly. Frozen
+              bsc-bio-ehr-es encoder with a linear head (PyTorch, Hugging Face Transformers).
+            </p>
+            <figure class="ner-demo">
+              <p lang="es">
+                <mark data-l="HISTOLOGIA">Adenocarcinoma invasor de predominio acinar</mark>,
+                <mark data-l="ESTADIO">estadio IVA</mark>
+                (<mark data-l="TNM T">cT2b</mark> <mark data-l="TNM N">N1</mark> <mark data-l="TNM M">M1a</mark>).
+                <mark data-l="ECOG">ECOG 0</mark>. <mark data-l="BIOMARCADOR">Mutación KRAS G12C</mark>,
+                <mark data-l="PDL1">TPS 70–80%</mark>. Inicia
+                <mark data-l="TRATAMIENTO">CARBOPLATINO + PEMETREXED + PEMBROLIZUMAB</mark> el
+                <mark data-l="FECHA">31/10/2024</mark>.
+              </p>
+              <figcaption>Illustrative sentence written for this page, not from a patient record. Spans follow the project's annotation guideline.</figcaption>
+            </figure>
             <p class="metrics num">
-              <span>Micro-F1, overlap <b>0.71</b></span>
-              <span>Micro-F1, strict <b>0.47</b></span>
-              <span>Annotated spans <b>1,432</b></span>
+              <span>Gold-standard spans <b>1,432</b></span>
               <span>Notes / patients <b>108 / 43</b></span>
+              <span>Micro-F1 <b>0.71</b> overlap · <b>0.47</b> strict</span>
             </p>
           </article>
 
           <article>
-            <h3><a href="https://github.com/Gus-BioMedAI/06-InflammEye">InflammEye</a></h3>
-            <p class="role">Personal project in rheumatology and thermal imaging</p>
+            <h3><a href="https://github.com/Gus-BioMedAI/06-InflammEye">InflammEye: joint-by-joint inflammation from a thermal image of the hand</a></h3>
+            <p class="role">University project with Hospital Universitario Ramón y Cajal · five-person team</p>
             <p>
-              Per-joint inflammation monitoring for rheumatoid arthritis from FLIR hand
-              thermograms. MediaPipe locates the joints, a LightGBM model returns an
-              inflammation probability for each one with a SHAP explanation, and a composite
-              ThermoJIS score summarises the hand. It correlates with CDAI (ρ = 0.81) and
-              SDAI (ρ = 0.83).
+              Rheumatoid-arthritis activity is scored joint by joint. InflammEye takes a FLIR hand thermogram,
+              locates each joint (MediaPipe), and returns a per-joint inflammation probability with a SHAP
+              explanation (LightGBM), plus a whole-hand ThermoJIS score.
             </p>
             <p>
-              Built end to end: a FastAPI model service, and a React and TypeScript front end
-              with Supabase auth and storage, designed with EU MDR and AEMPS in mind. A research
-              prototype, not a diagnostic device. <a href="https://youtu.be/sR41FNVQdh4">Watch the demo</a>.
+              Trained on thermograms collected at the hospital: 136 patients, 3,982 joints. ThermoJIS tracks
+              the scores rheumatologists already use: ρ = 0.81 with CDAI and 0.83 with SDAI.
+            </p>
+            <p>
+              I wrote most of the code, from the model to the app: a FastAPI model service, a React and
+              TypeScript front end, and Supabase auth and storage. Diego Benito worked on the temperature
+              features and debugging, helped with the data and was our main contact with the hospital's
+              clinicians. The rest of the team wrote the market and business plan. A research prototype,
+              not a diagnostic device. <a href="https://youtu.be/sR41FNVQdh4">Watch the demo</a> (it uses dummy images and data).
+            </p>
+            <figure class="flow">
+              <ol aria-label="InflammEye pipeline">
+                <li>FLIR hand thermogram</li>
+                <li>Joints located (MediaPipe)</li>
+                <li>Per-joint probability + SHAP (LightGBM)</li>
+                <li>Whole-hand ThermoJIS score</li>
+              </ol>
+            </figure>
+            <p class="metrics num">
+              <span>ρ with CDAI <b>0.81</b></span>
+              <span>Joint-level ROC-AUC <b>0.84</b></span>
+              <span>PR-AUC <b>0.33</b> at 7.1% prevalence (≈4.6× chance)</span>
+              <span>Patients <b>136</b></span>
+            </p>
+          </article>
+
+          <article>
+            <h3>Multimodal survival model for lung cancer, tested with oncologists</h3>
+            <p class="role">Master's thesis, UPM · placement at Hospital Clínico San Carlos · supervised by Laura Llorente-Sanz · defended July 2026</p>
+            <p>
+              Does adding CT radiomics to clinical variables improve survival prediction in non-small-cell
+              lung cancer? I built a late-fusion model on the public NSCLC-Radiomics cohort (421 patients).
+              A shared variable schema links it to the NER pipeline above, so the same variables can come
+              from hospital notes or the public cohort.
+            </p>
+            <p>
+              The combined model ranked patients better than either source alone (C-index 0.587, against
+              0.577 imaging-only and 0.539 clinical-only). The gain is small, and I report it with
+              calibration (integrated Brier score 0.21).
+            </p>
+            <p>
+              I then took it to the intended users. I presented the model to oncologists in three sessions
+              (two on site, one online) and ran a Technology Acceptance Model survey (5 oncologists,
+              3 biomedical engineers). The oncologists rated usefulness and adoption intent 4.4 to 4.8 out of 5.
             </p>
             <p class="metrics num">
-              <span>Patients <b>136</b></span>
-              <span>Joints <b>3,982</b></span>
-              <span>ROC-AUC <b>0.84</b></span>
-              <span>PR-AUC <b>0.33</b> at 7.1% prevalence</span>
-            </p>
-          </article>
-
-          <article>
-            <h3>OncoTwin datathon</h3>
-            <p class="role">Technical advisor, Innovation Unit, Hospital Clínico San Carlos</p>
-            <p>
-              Mentored the lung-cancer team on generating synthetic clinical data and applying
-              it to AI modelling.
+              <span>Patients <b>421</b></span>
+              <span>C-index <b>0.587</b> (clinical-only 0.539)</span>
+              <span>Sessions with oncologists <b>3</b></span>
+              <span>Usefulness <b>4.4–4.8</b> / 5</span>
             </p>
           </article>
 
@@ -449,30 +538,25 @@ footer {
       </div>
     </section>
 
-    <!-- ══ ABOUT ═════════════════════════════ -->
-    <section class="section" id="about">
-      <p class="runhead">About</p>
+    <!-- ══ EXPERIENCE ════════════════════════ -->
+    <section class="section" id="experience">
+      <p class="runhead">Experience</p>
       <div class="body">
-        <h2>How I work.</h2>
-
-        <div class="prose">
-          <p class="lede">
-            I am a biomedical engineer in Madrid. I finished an MSc at UPM in July 2026,
-            after a bachelor's at Politecnico di Milano.
-          </p>
-          <p>
-            Most of my work sits between a hospital and a model. Clinical AI often performs well on a test set and then fails in a real clinic, so I spend most of my time on the data: what each field means, who entered it, and what a clinician needs to see before trusting an output.
-          </p>
-          <p>
-            Before the hospital I worked as a junior SAP SD consultant in Milan, resolving
-            client incidents and testing an integration go-live for Limonta S.p.A., and in
-            customer-facing jobs in Italy while I studied. My bachelor's thesis simulated
-            radiomic data to validate imaging methods.
-          </p>
-          <p>
-            Outside of that: film, reading, piano and photography.
-          </p>
-        </div>
+        <h2>Experience.</h2>
+        <dl class="stub exp">
+          <div>
+            <dt>Hospital Clínico San Carlos, Madrid<br>02–07/2026</dt>
+            <dd><b>AI Research Intern, Oncology</b> (master's thesis placement). Clinical NLP and survival modelling, described above. Also technical advisor at the hospital's OncoTwin datathon, giving a team of 8–9 technical solutions for synthetic clinical data and AI modelling.</dd>
+          </div>
+          <div>
+            <dt>Software Business Srl, Milan<br>05–08/2025</dt>
+            <dd><b>Junior SAP SD Consultant.</b> Resolved client incidents in the Sales &amp; Distribution module and tested workflows during the Limonta S.p.A. integration go-live.</dd>
+          </div>
+          <div>
+            <dt>Italy<br>2021–2025</dt>
+            <dd><b>Customer-facing roles.</b> Technical support at Covisian (2021) and customer service at Signorvino (2024–25), with multilingual customers.</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -484,45 +568,58 @@ footer {
 
         <div class="key">
           <div>
-            <h3>Clinical and domain</h3>
+            <h3>Clinical data</h3>
             <ul>
-              <li><i>a</i><span>Reading and structuring Spanish EHR data and oncology notes on-premise</span></li>
-              <li><i>b</i><span>Radiomics and medical imaging fundamentals across modalities</span></li>
-              <li><i>c</i><span>Working within hospital constraints: GDPR and LOPDGDD, pseudonymised data, limited clinician time</span></li>
-              <li><i>d</i><span>EU MDR 2017/745 fundamentals and health-technology market access (coursework)</span></li>
+              <li>Structuring Spanish EHR data and oncology notes on-premise</li>
+              <li>Annotation guidelines and gold standards built with clinicians</li>
+              <li>Radiomics, medical imaging fundamentals and survival analysis</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Regulatory and quality</h3>
+            <ul>
+              <li>EU MDR 2017/745 fundamentals and health-technology market access (MSc coursework)</li>
+              <li>GDPR and LOPDGDD in practice: pseudonymised data, offline on-premise processing</li>
+              <li>Patient-level validation and calibration reporting</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Clinicians and clients</h3>
+            <ul>
+              <li>Presenting clinical AI to oncologists, on site and online</li>
+              <li>Translating between clinicians, engineers and data scientists in Spanish, Italian and English</li>
+              <li>Client incident support and go-live testing (SAP SD)</li>
             </ul>
           </div>
           <div>
             <h3>Technical</h3>
             <ul>
-              <li><i>e</i><span>Python (PyTorch, Hugging Face Transformers, scikit-learn, pandas), plus R, MATLAB, SQL and TypeScript</span></li>
-              <li><i>f</i><span>Survival analysis (scikit-survival, lifelines), gradient boosting with SHAP, transformer-based NER</span></li>
-              <li><i>g</i><span>Patient-level cross-validation, calibration reporting, and serving models with FastAPI</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3>Working across teams</h3>
-            <ul>
-              <li><i>h</i><span>Translating between clinicians, engineers and data scientists in Spanish, Italian and English</span></li>
-              <li><i>i</i><span>Structured literature review and scientific writing</span></li>
-              <li><i>j</i><span>SAP SD, from incident support to integration testing at go-live</span></li>
+              <li>Python: PyTorch, Hugging Face Transformers, scikit-learn, scikit-survival, lifelines, pandas</li>
+              <li>R, MATLAB, SQL, TypeScript; FastAPI and React for model services and front ends</li>
+              <li>Transformer-based NER, gradient boosting with SHAP</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ DIRECTION ═════════════════════════ -->
-    <section class="section" id="direction">
-      <p class="runhead">Direction</p>
+    <!-- ══ ABOUT ═════════════════════════════ -->
+    <section class="section" id="about">
+      <p class="runhead">About</p>
       <div class="body">
-        <h2>What I am looking for.</h2>
+        <h2>How I work.</h2>
+
         <div class="prose">
-          <p class="lede">
-            A team building health technology that is used in real hospitals.
+          <p class="lede">Most of my work sits between a hospital and a model.</p>
+          <p>
+            Clinical AI often performs well on a test set and then fails in a real clinic, so I spend most
+            of my time on the data: what each field means, who entered it, and what a clinician needs to see
+            before trusting an output. That is why the NER project started with a guideline written with an
+            oncologist, and the thesis ended in front of oncologists, not just a test set.
           </p>
           <p>
-            My first choice is clinical data and AI, especially oncology, imaging and clinical text. I am also open to regulatory and quality (EU MDR), clinical application specialist and medtech product roles. I am based in Madrid and can start full-time now.
+            My bachelor's thesis at Politecnico di Milano simulated radiomic data to validate imaging methods.
+            Outside work: film, reading, piano and photography.
           </p>
         </div>
       </div>
@@ -533,12 +630,12 @@ footer {
   <!-- ══ CONTACT ═════════════════════════════ -->
   <section class="contact" id="contact">
     <h2>Get in touch.</h2>
-    <div class="contact-links">
-      <a href="mailto:gustavoguacanemefernandez@gmail.com" aria-label="Email" title="gustavoguacanemefernandez@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/gustavoguacanemefernandez14" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-      <a href="https://github.com/Gus-BioMedAI" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-      <a href="cv.pdf" aria-label="Download CV" title="Download CV"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i></a>
-    </div>
+    <p class="contact-email"><a href="mailto:gustavoguacanemefernandez@gmail.com">gustavoguacanemefernandez@gmail.com</a></p>
+    <p class="contact-links">
+      <a class="btn" href="cv.pdf" download="Gustavo-Guacaneme-CV.pdf">Download CV (PDF)</a>
+      <a href="https://www.linkedin.com/in/gustavoguacanemefernandez14">LinkedIn</a>
+      <a href="https://github.com/Gus-BioMedAI">GitHub</a>
+    </p>
   </section>
 
   <footer>
