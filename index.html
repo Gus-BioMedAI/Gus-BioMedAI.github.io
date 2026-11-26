@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gustavo — Clinical AI &amp; biomedical engineering</title>
+<title>Gustavo Guacaneme | Clinical AI and biomedical engineering</title>
 
 <meta name="description" content="Biomedical engineer in Madrid. Clinical NLP, multimodal survival modelling for lung cancer, and clinical AI that holds up in a hospital.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gustavo — Clinical AI &amp; biomedical engineering">
+<meta property="og:title" content="Gustavo Guacaneme | Clinical AI and biomedical engineering">
 <meta property="og:description" content="Biomedical engineer in Madrid. Clinical NLP, multimodal survival modelling for lung cancer, and clinical AI that holds up in a hospital.">
 <meta property="og:url" content="https://gus-biomedai.github.io/">
 <meta name="twitter:card" content="summary">
@@ -334,15 +334,14 @@ footer {
       <h1>Multimodal AI for lung-cancer modelling.</h1>
       <div class="hero-rule" role="presentation"></div>
       <p class="hero-sub">
-        I build clinical models that clinicians can actually read — and I care as much
-        about the clinical note as about the loss curve.
+        I build clinical AI on real hospital data, designed so that clinicians can read and check what it outputs.
       </p>
 
       <dl class="stub">
         <div><dt>Focus</dt><dd>Clinical AI, oncology, multimodal data</dd></div>
         <div><dt>Based in</dt><dd>Madrid, available full-time</dd></div>
-        <div><dt>Education</dt><dd>MSc Biomedical Engineering, UPM (2026) · BSc, Politecnico di Milano</dd></div>
-        <div><dt>Languages</dt><dd>Spanish, Italian, English · French (A2)</dd></div>
+        <div><dt>Education</dt><dd>MSc Biomedical Engineering, UPM (2026); BSc, Politecnico di Milano</dd></div>
+        <div><dt>Languages</dt><dd>Spanish, Italian, English; French (A2)</dd></div>
       </dl>
     </section>
 
@@ -356,35 +355,28 @@ footer {
 
           <article>
             <h3>Multimodal survival modelling for lung cancer</h3>
-            <p class="role">Master's thesis, UPM · placement at Hospital Clínico San Carlos · supervised by Laura Llorente-Sanz · defended July 2026</p>
+            <p class="role">Master's thesis, UPM. Placement at Hospital Clínico San Carlos, supervised by Laura Llorente-Sanz. Defended July 2026.</p>
             <p>
               Does adding CT radiomics to clinical variables improve survival prediction in
-              non-small-cell lung cancer — and would oncologists use the result? I built a
-              late-fusion survival model on the public NSCLC-Radiomics cohort and joined it to
-              the hospital-side NLP pipeline below through a shared variable schema, so real
-              hospital notes and the public cohort describe patients with the same variables.
+              non-small-cell lung cancer, and would oncologists use the result? I built a late-fusion survival model on the public NSCLC-Radiomics cohort and linked it to the NLP pipeline below through a shared variable schema, so hospital notes and the public cohort use the same variables.
             </p>
             <p>
-              Fusion beat imaging-only (0.577) and clinical-only (0.539) on concordance. The
-              gain is modest, and I report it with calibration alongside discrimination. In a
+              Fusion beat imaging-only (0.577) and clinical-only (0.539) on concordance. The gain is modest, and I report it together with calibration. In a
               Technology Acceptance Model survey of 8 respondents (5 oncologists, 3 biomedical
-              engineers), clinicians rated usefulness and adoption intent 4.4–4.8 out of 5.
+              engineers), clinicians rated usefulness and adoption intent between 4.4 and 4.8 out of 5.
             </p>
             <p class="metrics num">
               <span>C-index <b>0.587</b></span>
               <span>Patients <b>421</b></span>
-              <span>Integrated Brier <b>≈ 0.21</b></span>
+              <span>Integrated Brier score <b>0.21</b></span>
             </p>
           </article>
 
           <article>
             <h3>Spanish clinical NER for oncology notes</h3>
-            <p class="role">Hospital Clínico San Carlos · AI Research Intern, Feb–Jul 2026</p>
+            <p class="role">AI Research Intern, Hospital Clínico San Carlos, February to July 2026</p>
             <p>
-              Extracts ten oncology variables — histology, TNM, stage, ECOG, biomarkers, PD-L1,
-              treatment and dates — from free-text Spanish lung-cancer notes, using a frozen
-              bsc-bio-ehr-es encoder with a trainable linear head (PyTorch, Hugging Face
-              Transformers).
+              Extracts ten oncology variables from free-text Spanish lung-cancer notes: histology, TNM, stage, ECOG, biomarkers, PD-L1, treatment and dates. The model is a frozen bsc-bio-ehr-es encoder with a trainable linear head (PyTorch, Hugging Face Transformers).
             </p>
             <p>
               There was no labelled data, so I built the gold standard from scratch: regex and
@@ -403,7 +395,7 @@ footer {
 
           <article>
             <h3><a href="https://github.com/Gus-BioMedAI/06-InflammEye">InflammEye</a></h3>
-            <p class="role">Personal project · rheumatology, thermal imaging · research prototype</p>
+            <p class="role">Personal project in rheumatology and thermal imaging</p>
             <p>
               Per-joint inflammation monitoring for rheumatoid arthritis from FLIR hand
               thermograms. MediaPipe locates the joints, a LightGBM model returns an
@@ -426,7 +418,7 @@ footer {
 
           <article>
             <h3>OncoTwin datathon</h3>
-            <p class="role">Technical advisor · Innovation Unit, Hospital Clínico San Carlos</p>
+            <p class="role">Technical advisor, Innovation Unit, Hospital Clínico San Carlos</p>
             <p>
               Mentored the lung-cancer team on generating synthetic clinical data and applying
               it to AI modelling.
@@ -449,11 +441,7 @@ footer {
             after a bachelor's at Politecnico di Milano.
           </p>
           <p>
-            Most of my work sits between a hospital and a model. That gap is where clinical
-            AI usually fails: the metric holds on a held-out split and then falls apart on a
-            Tuesday morning in a real clinic. I spend my time on the unglamorous half —
-            what the data actually means, who entered it, and what a clinician needs to see
-            before they trust an output.
+            Most of my work sits between a hospital and a model. Clinical AI often performs well on a test set and then fails in a real clinic, so I spend most of my time on the data: what each field means, who entered it, and what a clinician needs to see before trusting an output.
           </p>
           <p>
             Before the hospital I worked as a junior SAP SD consultant in Milan, resolving
@@ -472,24 +460,24 @@ footer {
     <section class="section" id="skills">
       <p class="runhead">Skills</p>
       <div class="body">
-        <h2>What I can be handed on day one.</h2>
+        <h2>What I bring.</h2>
 
         <div class="key">
           <div>
             <h3>Clinical and domain</h3>
             <ul>
-              <li><i>a</i><span>Reading and structuring EHR data and oncology notes, in Spanish and on-premise</span></li>
-              <li><i>b</i><span>Radiomics and medical imaging fundamentals, and what each modality can and cannot tell you</span></li>
-              <li><i>c</i><span>Working inside a hospital's constraints — GDPR and LOPDGDD, pseudonymised data, clinician time</span></li>
+              <li><i>a</i><span>Reading and structuring Spanish EHR data and oncology notes on-premise</span></li>
+              <li><i>b</i><span>Radiomics and medical imaging fundamentals across modalities</span></li>
+              <li><i>c</i><span>Working within hospital constraints: GDPR and LOPDGDD, pseudonymised data, limited clinician time</span></li>
               <li><i>d</i><span>EU MDR 2017/745 fundamentals and health-technology market access (coursework)</span></li>
             </ul>
           </div>
           <div>
             <h3>Technical</h3>
             <ul>
-              <li><i>e</i><span>Python — PyTorch, Hugging Face Transformers, scikit-learn, pandas; also R, MATLAB, SQL, TypeScript</span></li>
+              <li><i>e</i><span>Python (PyTorch, Hugging Face Transformers, scikit-learn, pandas), plus R, MATLAB, SQL and TypeScript</span></li>
               <li><i>f</i><span>Survival analysis (scikit-survival, lifelines), gradient boosting with SHAP, transformer-based NER</span></li>
-              <li><i>g</i><span>Patient-level cross-validation, calibration next to discrimination, models served behind FastAPI</span></li>
+              <li><i>g</i><span>Patient-level cross-validation, calibration reporting, and serving models with FastAPI</span></li>
             </ul>
           </div>
           <div>
@@ -497,7 +485,7 @@ footer {
             <ul>
               <li><i>h</i><span>Translating between clinicians, engineers and data scientists in Spanish, Italian and English</span></li>
               <li><i>i</i><span>Structured literature review and scientific writing</span></li>
-              <li><i>j</i><span>Enterprise software: SAP SD, from support ticket to go-live</span></li>
+              <li><i>j</i><span>SAP SD, from incident support to integration testing at go-live</span></li>
             </ul>
           </div>
         </div>
@@ -511,14 +499,10 @@ footer {
         <h2>What I am looking for.</h2>
         <div class="prose">
           <p class="lede">
-            A team putting health technology to work inside a real hospital, not just
-            on a benchmark.
+            A team building health technology that is used in real hospitals.
           </p>
           <p>
-            Clinical data and AI first: oncology, imaging and messy clinical text are where
-            I am most useful. I am also open to regulatory and quality (EU MDR), clinical
-            application specialist and medtech product roles. Based in Madrid and available
-            full-time now.
+            My first choice is clinical data and AI, especially oncology, imaging and clinical text. I am also open to regulatory and quality (EU MDR), clinical application specialist and medtech product roles. I am based in Madrid and can start full-time now.
           </p>
         </div>
       </div>
@@ -538,7 +522,7 @@ footer {
   </section>
 
   <footer>
-    <span>Gustavo Guacaneme Fernández — biomedical engineer, Madrid</span>
+    <span>Gustavo Guacaneme Fernández, biomedical engineer, Madrid</span>
     <span>Last updated November 2026</span>
   </footer>
 
