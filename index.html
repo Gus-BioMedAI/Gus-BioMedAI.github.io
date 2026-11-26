@@ -25,6 +25,8 @@
   } catch (e) {}
 </script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 <style>
 /* ─────────────────────────────────────────────
    TOKENS — see DESIGN.md for the rationale
@@ -299,8 +301,26 @@ figcaption {
 .contact h2 { font-size: var(--fs-h2); max-width: 14ch; }
 .contact-links {
   margin-top: var(--s4);
-  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s4);
-  font-size: var(--fs-lead); font-weight: 300;
+  display: flex; flex-wrap: wrap; gap: var(--s2);
+}
+.contact-links a {
+  display: inline-grid; place-items: center;
+  width: 3.25rem; height: 3.25rem;
+  border: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: color .2s, border-color .2s, transform .2s;
+}
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: var(--sanguine);
+  border-color: currentColor;
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-links a { transition: none; }
+  .contact-links a:hover, .contact-links a:focus-visible { transform: none; }
 }
 
 footer {
@@ -514,10 +534,10 @@ footer {
   <section class="contact" id="contact">
     <h2>Get in touch.</h2>
     <div class="contact-links">
-      <a href="mailto:gustavoguacanemefernandez@gmail.com">gustavoguacanemefernandez@gmail.com</a>
-      <a href="https://www.linkedin.com/in/gustavoguacanemefernandez14">LinkedIn</a>
-      <a href="https://github.com/Gus-BioMedAI">GitHub</a>
-      <a href="cv.pdf">Download CV</a>
+      <a href="mailto:gustavoguacanemefernandez@gmail.com" aria-label="Email" title="gustavoguacanemefernandez@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/gustavoguacanemefernandez14" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://github.com/Gus-BioMedAI" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="cv.pdf" aria-label="Download CV" title="Download CV"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i></a>
     </div>
   </section>
 
